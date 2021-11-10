@@ -13,6 +13,7 @@ platform3 = loadImage("images/platform3.png")
 platform4 = loadImage("images/platform4.png")
 platform5 = loadImage("images/platform5.png")
 platform6 = loadImage("images/platform6.png")
+bg = loadImage('images/bg.png');
 
 }
 
@@ -32,19 +33,17 @@ function setup() {
 }
 
 function draw() {
-  background("#F2F5B6");
+  background(bg);
 
  
   if(keyDown("up"))
   {
     player.velocityY=-10
-    //jumpSound1.play()
   }
 
   if(keyDown("left"))
   {
     player.x = player.x - 7;
-    //leftSound.play()
   }
 
   if(keyDown("right"))
@@ -63,8 +62,7 @@ function draw() {
   spawnPlatform();
 
   drawSprites();
-  textSize(20);
-  fill(255);
+  
   
 }
 
